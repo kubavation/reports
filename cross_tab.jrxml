@@ -3,7 +3,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1c10db74-62e9-435a-9e87-e0252412448a">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="company-management"/>
-	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#FFFFFF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
@@ -12,7 +12,7 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#FFFFFF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
@@ -21,7 +21,7 @@
 			<rightPen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
-	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#FFFFFF">
 		<box>
 			<pen lineWidth="0.5" lineColor="#000000"/>
 			<topPen lineWidth="0.5" lineColor="#000000"/>
@@ -84,9 +84,9 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 		<band height="255" splitType="Stretch"/>
 	</columnHeader>
 	<summary>
-		<band height="486" splitType="Stretch">
+		<band height="352" splitType="Stretch">
 			<crosstab>
-				<reportElement x="150" y="190" width="300" height="240" uuid="6965f57d-81ec-4944-9ef0-5158d15c9794">
+				<reportElement x="0" y="0" width="555" height="350" uuid="6965f57d-81ec-4944-9ef0-5158d15c9794">
 					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
 					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
 					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
@@ -94,10 +94,10 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
 				</reportElement>
 				<crosstabHeaderCell>
-					<cellContents>
+					<cellContents backcolor="#FFFFFF" mode="Opaque" style="Crosstab_CD">
 						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 						<staticText>
-							<reportElement x="0" y="0" width="60" height="20" uuid="5136898b-eac2-4311-bcde-21463e69c130"/>
+							<reportElement mode="Opaque" x="0" y="0" width="190" height="20" backcolor="#A6B8ED" uuid="5136898b-eac2-4311-bcde-21463e69c130"/>
 							<box>
 								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -107,7 +107,7 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 							<text><![CDATA[Name]]></text>
 						</staticText>
 						<staticText>
-							<reportElement x="60" y="0" width="60" height="20" uuid="ae7be368-d831-4656-ac64-118666e0d10d"/>
+							<reportElement mode="Opaque" x="190" y="0" width="120" height="20" backcolor="#A6B8ED" uuid="ae7be368-d831-4656-ac64-118666e0d10d"/>
 							<box>
 								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -118,14 +118,15 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 						</staticText>
 					</cellContents>
 				</crosstabHeaderCell>
-				<rowGroup name="name" width="60" totalPosition="End">
+				<rowGroup name="name" width="190" totalPosition="End">
 					<bucket class="java.lang.String">
 						<bucketExpression><![CDATA[$F{name}]]></bucketExpression>
 					</bucket>
 					<crosstabRowHeader>
 						<cellContents mode="Opaque" style="Crosstab_CH">
 							<textField>
-								<reportElement x="0" y="0" width="60" height="75" uuid="ce68fac5-74dd-4bc4-b4ee-10e938d007ff"/>
+								<reportElement mode="Opaque" x="0" y="0" width="190" height="75" uuid="ce68fac5-74dd-4bc4-b4ee-10e938d007ff"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$V{name}]]></textFieldExpression>
 							</textField>
 						</cellContents>
@@ -133,20 +134,22 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 					<crosstabTotalRowHeader>
 						<cellContents mode="Opaque" style="Crosstab_CT">
 							<staticText>
-								<reportElement x="0" y="0" width="120" height="40" forecolor="#FFFFFF" uuid="2f011afa-fadd-4786-a020-cb224a40ac83"/>
+								<reportElement mode="Opaque" x="0" y="0" width="310" height="40" forecolor="#000000" backcolor="#B1C3E0" uuid="2f011afa-fadd-4786-a020-cb224a40ac83"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<text><![CDATA[Razem:]]></text>
 							</staticText>
 						</cellContents>
 					</crosstabTotalRowHeader>
 				</rowGroup>
-				<rowGroup name="DATE" width="60" totalPosition="End">
+				<rowGroup name="DATE" width="120" totalPosition="End">
 					<bucket class="java.sql.Date">
 						<bucketExpression><![CDATA[$F{DATE}]]></bucketExpression>
 					</bucket>
 					<crosstabRowHeader>
 						<cellContents mode="Opaque" style="Crosstab_CH">
-							<textField>
-								<reportElement x="0" y="0" width="60" height="75" uuid="8844d659-dc51-4e07-9c63-bb7ca6117cba"/>
+							<textField pattern="yyyy-MM-dd">
+								<reportElement mode="Opaque" x="0" y="0" width="120" height="75" uuid="8844d659-dc51-4e07-9c63-bb7ca6117cba"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$V{DATE}]]></textFieldExpression>
 							</textField>
 						</cellContents>
@@ -161,79 +164,83 @@ left join public."TEST_EMP_SWIADCZENIE" s on emp.id = s.emp_id]]>
 					</bucket>
 					<crosstabColumnHeader>
 						<cellContents mode="Opaque" style="Crosstab_CH">
-							<textField>
-								<reportElement x="0" y="0" width="60" height="20" uuid="34df9301-863e-4e78-b8c5-845e5b2e0aff"/>
-								<textFieldExpression><![CDATA[$V{dummy2}]]></textFieldExpression>
-							</textField>
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="120" height="20" backcolor="#A6B8ED" uuid="f1b346b4-f8b1-48a3-afe6-37aaafc35f16"/>
+								<text><![CDATA[Kwota]]></text>
+							</staticText>
 						</cellContents>
 					</crosstabColumnHeader>
 					<crosstabTotalColumnHeader>
-						<cellContents mode="Opaque" style="Crosstab_CG">
+						<cellContents mode="Opaque" style="Crosstab_CT">
 							<staticText>
-								<reportElement x="0" y="0" width="60" height="20" uuid="df8822c3-6056-4d67-a849-55a1a0509427"/>
-								<text><![CDATA[Total dummy2]]></text>
+								<reportElement mode="Opaque" x="0" y="0" width="125" height="20" backcolor="#A6B8ED" uuid="d68d3a3e-78fc-446a-ac6e-dadaea5b98ab"/>
+								<text><![CDATA[Spłacona]]></text>
 							</staticText>
 						</cellContents>
 					</crosstabTotalColumnHeader>
 				</columnGroup>
-				<measure name="kwota_MEASURE" class="java.lang.Integer" calculation="Count">
+				<measure name="kwota_MEASURE" class="java.lang.Integer" calculation="Sum">
 					<measureExpression><![CDATA[$F{kwota}]]></measureExpression>
 				</measure>
-				<measure name="splacona_MEASURE" class="java.lang.Integer" calculation="Count">
+				<measure name="splacona_MEASURE" class="java.lang.Integer" calculation="Sum">
 					<measureExpression><![CDATA[$F{splacona}]]></measureExpression>
 				</measure>
-				<crosstabCell width="60" height="75">
+				<crosstabCell width="120" height="75">
 					<cellContents mode="Opaque" style="Crosstab_CD">
-						<textField>
-							<reportElement x="0" y="0" width="60" height="75" uuid="28543cdc-523f-4750-9747-b08682680e04"/>
+						<textField pattern="#,##0.00#;(#,##0.00#-)">
+							<reportElement mode="Opaque" x="0" y="0" width="120" height="75" uuid="28543cdc-523f-4750-9747-b08682680e04"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
 							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
 						</textField>
 					</cellContents>
 				</crosstabCell>
-				<crosstabCell width="60" height="75" columnTotalGroup="dummy2">
-					<cellContents mode="Opaque" style="Crosstab_CG">
-						<textField>
-							<reportElement x="0" y="0" width="60" height="75" uuid="4803a628-a910-4326-af8c-3384d11f2c99"/>
+				<crosstabCell width="125" height="75" columnTotalGroup="dummy2">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField pattern="#,##0.00#;(#,##0.00#-)">
+							<reportElement mode="Opaque" x="0" y="0" width="125" height="75" forecolor="#030000" uuid="4803a628-a910-4326-af8c-3384d11f2c99"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
 							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
 						</textField>
 					</cellContents>
 				</crosstabCell>
-				<crosstabCell width="60" height="40" rowTotalGroup="name">
+				<crosstabCell width="120" height="40" rowTotalGroup="name">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField pattern="#,##0.00#;(#,##0.00#-)">
+							<reportElement mode="Opaque" x="0" y="0" width="120" height="40" forecolor="#000000" backcolor="#B1C3E0" uuid="e698ce3d-bb20-48ee-9d50-746bbe411b38"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="125" height="40" rowTotalGroup="name" columnTotalGroup="dummy2">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField pattern="#,##0.00#;(#,##0.00#-)">
+							<reportElement mode="Opaque" x="0" y="0" width="125" height="40" forecolor="#000000" backcolor="#B1C3E0" uuid="7c78dde7-5874-4e24-b9cd-1c6eed6bbaa0"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="120" height="0" rowTotalGroup="DATE">
+					<cellContents backcolor="#FFFFFF" mode="Opaque" style="Crosstab_CG">
+						<textField>
+							<reportElement mode="Opaque" x="0" y="0" width="120" height="0" uuid="ebf89309-aeb8-4c17-8e68-2b4e21a53031"/>
+							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement mode="Opaque" x="0" y="0" width="120" height="0" uuid="ed1d9cfe-3a1f-4669-9c7c-21cd7e6ad447"/>
+							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="125" height="0" rowTotalGroup="DATE" columnTotalGroup="dummy2">
 					<cellContents mode="Opaque" style="Crosstab_CT">
 						<textField>
-							<reportElement x="0" y="0" width="60" height="40" forecolor="#FFFFFF" uuid="e698ce3d-bb20-48ee-9d50-746bbe411b38"/>
-							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
-						</textField>
-					</cellContents>
-				</crosstabCell>
-				<crosstabCell width="60" height="40" rowTotalGroup="name" columnTotalGroup="dummy2">
-					<cellContents mode="Opaque" style="Crosstab_CT">
-						<textField>
-							<reportElement x="0" y="0" width="60" height="40" forecolor="#FFFFFF" uuid="7c78dde7-5874-4e24-b9cd-1c6eed6bbaa0"/>
-							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
-						</textField>
-					</cellContents>
-				</crosstabCell>
-				<crosstabCell width="60" height="0" rowTotalGroup="DATE">
-					<cellContents mode="Opaque" style="Crosstab_CG">
-						<textField>
-							<reportElement x="0" y="0" width="60" height="0" uuid="ebf89309-aeb8-4c17-8e68-2b4e21a53031"/>
+							<reportElement mode="Opaque" x="0" y="0" width="125" height="0" forecolor="#FFFFFF" uuid="28afb33c-ac31-41d4-8f6a-6e118714ccd2"/>
 							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
 						</textField>
 						<textField>
-							<reportElement x="0" y="0" width="60" height="0" uuid="ed1d9cfe-3a1f-4669-9c7c-21cd7e6ad447"/>
-							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
-						</textField>
-					</cellContents>
-				</crosstabCell>
-				<crosstabCell width="60" height="0" rowTotalGroup="DATE" columnTotalGroup="dummy2">
-					<cellContents mode="Opaque" style="Crosstab_CG">
-						<textField>
-							<reportElement x="0" y="0" width="60" height="0" uuid="28afb33c-ac31-41d4-8f6a-6e118714ccd2"/>
-							<textFieldExpression><![CDATA[$V{kwota_MEASURE}]]></textFieldExpression>
-						</textField>
-						<textField>
-							<reportElement x="0" y="0" width="60" height="0" uuid="21f6ea5f-38f5-4129-83ec-e1bbafae321a"/>
+							<reportElement mode="Opaque" x="0" y="0" width="125" height="0" forecolor="#FFFFFF" uuid="21f6ea5f-38f5-4129-83ec-e1bbafae321a"/>
 							<textFieldExpression><![CDATA[$V{splacona_MEASURE}]]></textFieldExpression>
 						</textField>
 					</cellContents>
